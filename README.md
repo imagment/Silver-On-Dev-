@@ -25,7 +25,7 @@ To get information about each header file, see documents of those header files
 - prompt.h
 - markdowns.h
 - music.h
-- game.h
+- game.hpp
 
 ```
 #include "silver.hpp"
