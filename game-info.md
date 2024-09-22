@@ -58,7 +58,7 @@ y: The y-coordinate of the vector.<br>
 Returns a v3 structure with the provided x and y, and z set to 0.<br>
 Used when only two components (2D) are needed, but the v3 structure is required for consistency.<br>
 Example:<br>
-<br>
+
 ### Camera
 
 You can set the camera position by using the following function<br>
