@@ -59,6 +59,4 @@ Returns a v3 structure with the provided x and y, and z set to 0.
 Used when only two components (2D) are needed, but the v3 structure is required for consistency.
 Example:
 
-cpp
-코드 복사
-v3 point2D = vec2(10, 20);  // Creates a vector with x=10, y=20, z=0
+
