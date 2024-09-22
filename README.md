@@ -1,7 +1,10 @@
 # Silver C++
 ## Graphics implemented with emojis
 
-[![Imagment](logo.png)](https://github.com/imagment)
+<a href="https://github.com/imagment">
+  <img src="logo.png" alt="Imagment" width="250" height="120">
+</a>
+
 
 Dillinger is a cloud-enabled, mobile-ready, offline-storage compatible,
 AngularJS-powered HTML5 Markdown editor.
