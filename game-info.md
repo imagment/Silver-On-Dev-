@@ -127,9 +127,8 @@ Cell Size represents the average size (in bytes) of each cell in the game’s gr
 But this does not affects the memory usage. However, this affects the output of the world.
 
 ![2](https://github.com/user-attachments/assets/0c298168-9af7-45f2-94d3-5973601fcae8)
-Enough cell for each grid (Recommended)
+> Enough cell for each grid (Recommended)
 ![1](https://github.com/user-attachments/assets/ed00f029-303a-426b-92ce-0d620b36ff84)
-Increased cell size larger than recommended
+> Insufficient cell size
 ![4](https://github.com/user-attachments/assets/71cfac01-c7a1-4bd2-b93b-15d4ab143d0a)
-Insufficient cell size
-
+> Increased cell size larger than recommended
