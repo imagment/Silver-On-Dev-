@@ -39,7 +39,7 @@ cpp
 v3 position = vec3(10, 20, 30);  // Creates a vector with x=10, y=20, z=30
 ```
 <br>
-```cpp
+``` cpp
 vec2(int x, int y)
 ```
 The vec2 function creates a 2D vector but returns it in the v3 structure, with z automatically set to 0.<br>
