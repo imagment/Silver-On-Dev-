@@ -116,6 +116,7 @@ void moveCamera(v3 V); // Move camera by vector
 void zoomCamera(v3 V); // Zoom camera by vector
 void addCameraDepth(int X); // Increase camera depth
 void setCameraDepth(int X); // Set camera depth
+void shakeCamera(float intensity); // Shake camera
 ```
 
 ### What is Cell size?
@@ -131,4 +132,8 @@ But this does not affects the memory usage. However, this affects the output of 
 ![1](https://github.com/user-attachments/assets/ed00f029-303a-426b-92ce-0d620b36ff84)
 <br>Insufficient cell size<br><br>
 ![4](https://github.com/user-attachments/assets/71cfac01-c7a1-4bd2-b93b-15d4ab143d0a)
-<br>Increased cell size larger than recommended<br><br>
+<br>Increased cell size larger than recommended<br><br><br>
+
+
+
+
