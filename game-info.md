@@ -33,7 +33,7 @@ z: The z-coordinate of the vector.<br>
 <br>
 Returns a v3 structure with the provided coordinates.<br>
 Used when all three components of a vector (3D) are needed.<br>
-Example:<br>
+Example:
 ```
 cpp
 v3 position = vec3(10, 20, 30);  // Creates a vector with x=10, y=20, z=30
@@ -85,7 +85,7 @@ If there is no object, it prints the NULL replacement character.<br>
 If there is no object and it is outside of the World, it prints the out of bounds character.<br>
 <br>
 And instead of printing the camera, you can get the view of the camera by using the following function.<br>
-```cpp
+```
 vector<vector<string>> gPhoto()
 ```
 This has the similar functionality with `photo()` but it returns the camera view instead of printing it.<br>
@@ -99,7 +99,7 @@ void printCam()
 `printCam()` function is more efficeint because it uses double buffering and reduces blinking.<br>
 also, `void startVideo(int FPS)` function would continueously print the camera in another thread. <br>
 
-and to stop the video, you could use<br>
+and to stop the video, you could use
 ```cpp
 void endVideo() {
   isRunningCam = false; 
