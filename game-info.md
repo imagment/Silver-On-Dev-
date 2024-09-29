@@ -49,10 +49,16 @@ Example:
 ```cpp
 Vec2 v1(3, 4);
 Vec3 v2(1, 2, 3);
-Vec2 result = v1 + v2 + vec3.up; // result is (4, 7, 3)
+Vec3 result = v1 + v2 + vec3.up; // result is (4, 7, 3)
 ```
 <br>
 <br>
+
+**
+NOTE: <br> 
+While the Vec2 class is available for convenience when working with 2D vectors, all vector operations and parameters in the system ultimately use Vec3. <br> 
+Whenever a Vec2 is used, it is automatically converted into a Vec3 by setting the z component to 0. <br> 
+**
 
 ### Camera
 
