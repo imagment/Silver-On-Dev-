@@ -56,14 +56,19 @@ Vec3 result = v1 + v2 + vec3.up; // result is (4, 7, 3)
 <br>
 
 
-
 **NOTE:
 While the Vec2 class is available for convenience when working with 2D vectors, all vector operations and parameters in the system ultimately use Vec3. <br> 
 Whenever a Vec2 is used, it is automatically converted into a Vec3 by setting the z component to 0.** <br> <br>
 
 ### Camera
-
-
+**NOTE: All camera related functions are in the class 'Camera'**<br>
+To set the camera position, you can use this function.<br>
+`void setCam(Vec3 pos, Vec3 scale, int depth);`
+<br>
+Example usage:
+```cpp
+silver.camera.setCam(Vec2(int,int),Vec2(int,int),int);
+```
 
 
 ### List of functions
