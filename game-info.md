@@ -36,13 +36,13 @@ Vec3(int x, int y, int z) // Creates a 3D vector with specified x, y, and z comp
 
 Predefined Directions:
 ```cpp
-Vec3::up() // Returns a vector (0, 1, 0) representing the upward direction.
-Vec3::down() // Returns a vector (0, -1, 0) representing the downward direction.
-Vec3::left() // Returns a vector (-1, 0, 0) representing the left direction.
-Vec3::right() // Returns a vector (1, 0, 0) representing the right direction.
-Vec3::forward() // Returns a vector (0, 0, 1) representing the forward direction.
-Vec3::backward() // Returns a vector (0, 0, -1) representing the backward direction.
-Vec3::zero() // Returns a vector (0, 0, 0) representing the origin or no movement.
+vector.up() // Returns a vector (0, 1, 0) representing the upward direction.
+vector.down() // Returns a vector (0, -1, 0) representing the downward direction.
+vector.left() // Returns a vector (-1, 0, 0) representing the left direction.
+vector.right() // Returns a vector (1, 0, 0) representing the right direction.
+vector.forward() // Returns a vector (0, 0, 1) representing the forward direction.
+vector.backward() // Returns a vector (0, 0, -1) representing the backward direction.
+vector.zero() // Returns a vector (0, 0, 0) representing the origin or no movement.
 ```
 
 Example:
@@ -51,22 +51,8 @@ Vec2 v1(3, 4);
 Vec3 v2(1, 2, 3);
 Vec2 result = v1 + v2 + vec3.up; // result is (4, 7, 3)
 ```
-
-
-Function Signature:<br>
-
-```cpp
-v3 vec2(int x, int y);
-```
 <br>
-Explanation:<br>
 <br>
-Parameters:<br>
-x: The x-coordinate of the vector.<br>
-y: The y-coordinate of the vector.<br>
-Returns a v3 structure with the provided x and y, and z set to 0.<br>
-Used when only two components (2D) are needed, but the v3 structure is required for consistency.<br>
-Example:<br>
 
 ### Camera
 
