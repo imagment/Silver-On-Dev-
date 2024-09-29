@@ -63,5 +63,73 @@ Whenever a Vec2 is used, it is automatically converted into a Vec3 by setting th
 
 
 ### List of functions
+These are the list of functions, classes, keywords etc.
+```cpp
+//Vector related
+Vec2(int x, int y)
+Vec3(int x, int y, int z)
 
+//Object related
+void createObject(const std::string name, const std::string& shape);
+
+//Placing related
+void place(string objectName, int number, Vec3 position);
+void placeSpray(const string objectName, int spawns, Vec3 center, int range);
+void placeExactSpray(const string objectName, int count, Vec3 startPosition);
+
+//Drawing related
+void draw(Vec3 pos, std::string c);
+void drawLine(Vec3 start, Vec3 end, std::string c);
+void drawRectangle(Vec3 topLeft, int width, int height, string c);
+void drawCircle(Vec3 center, int radius, std::string c);
+void drawCircleHollow(Vec3 center, int radius, std::string c);
+void drawRectangleHollow(Vec3 topLeft, int width, int height, string c);
+
+//Movement
+void setObjectPositionX(string name, int number, int x_offset);
+void setObjectPositionY(const std::string name, int number, int y_offset);
+void setObjectPositionXY(const std::string name, int number, Vec3 pos);
+void setObjectPosition(const std::string name, int number, Vec3 pos);
+
+void setObjectPositionRandom(const std::string& name, int number);
+void setObjectPositionToSprite(const std::string& name, int number, const std::string& targetName, int targetNumber);
+
+void moveObjectPositionX(string name, int number, int x_offset); 
+void moveObjectPositionY(string name, int number, int y_offset);
+void moveObjectPositionXY(const std::string name, int number, Vec3 pos);
+void moveObjectPosition(const std::string name, int number, Vec3 pos);
+
+void glideObjectPositionRandom(const std::string& name, int number, float speed) ;
+void glideObjectPositionX(string name, int number, int x_offset, float speed);
+void glideObjectPositionY(string name, int number, int target_y, float speed);
+void glideObjectPositionXY(string name, int number, Vec3 target_pos, float speed);
+void glideObjectPositionToSprite(const string& name, int number, const string& target, int targetNumber,float speed);
+    
+//World related
+void setWorldBounds(Vec3 world);
+
+//Component related
+void applyComponent(const std::string object, int number, const std::string component, ...);
+void removeScript(const std::string objectName, const std::string& scriptToRemove);
+
+//Camera related (in class camera)
+void setCam(Vec3 pos, Vec3 scale, int depth);
+void printCam();
+void flipCamera(int X, int Y); 
+void setCameraFlip(int X, int Y); 
+
+void SetCameraFlip(int X, int Y);
+void pivotCamera(int angle); 
+void addPivotCamera(int angle); 
+void shakeCamera(float intensity); 
+void zoomCamera(Vec3 V); 
+void addCameraDepth(int X); 
+void setCameraDepth(int X); 
+void moveCamera(Vec3 V); 
+void startVideo(int FPS);
+void endVideo();
+//e.g. camera.printCam()
+//e.g. Camera c; c.printcam();
+
+```
 
