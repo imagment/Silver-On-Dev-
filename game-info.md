@@ -8,6 +8,7 @@
   - [Object Declaration](#object-declaration)
   - [Object Movement](#object-movement)
 - [Source Code & Modding Guidelines](#source-code--modding-guidelines)
+- [List of functions](#list-of-functions)
 
 ## Functions
 
@@ -54,87 +55,13 @@ Vec3 result = v1 + v2 + vec3.up; // result is (4, 7, 3)
 <br>
 <br>
 
-**
-NOTE: <br> 
+
+
+**NOTE:
 While the Vec2 class is available for convenience when working with 2D vectors, all vector operations and parameters in the system ultimately use Vec3. <br> 
-Whenever a Vec2 is used, it is automatically converted into a Vec3 by setting the z component to 0. <br> 
-**
-
-### Camera
-
-You can set the camera position by using the following function<br>
-```cpp
-void setCam(v3 pos, v3 scale, int depth);
-```
-
-For example,
-``` cpp
-void setCam(vec2(3,5), v2(4,8), 6);
-```
-Sets the camera position to 3,5<br>
-Sets the camera scale to 4,8<br>
-And sets the camera depth to 6.<br>
-
-And you can print the view of the camera by using the following function.<br>
-``` cpp
-void photo();
-```
-<br>
-This prints the portion of the world.<br>
-If there is a object, it prints the object has the minimum Z position<br>
-If there is no object, it prints the NULL replacement character.<br>
-If there is no object and it is outside of the World, it prints the out of bounds character.<br>
-<br>
-And instead of printing the camera, you can get the view of the camera by using the following function.<br>
-```
-vector<vector<string>> gPhoto()
-```
-This has the similar functionality with `photo()` but it returns the camera view instead of printing it.<br>
-Also, `frame()` function would clear the screen and print the camera.<br>
-
-But if you are trying to render the camera, `photo()` and `frame()` would not be a good option. Instead you could use this function<br>
-
-```
-void printCam()
-```
-`printCam()` function is more efficeint because it uses double buffering and reduces blinking.<br>
-also, `void startVideo(int FPS)` function would continueously print the camera in another thread. <br>
-
-and to stop the video, you could use
-```cpp
-void endVideo() {
-  isRunningCam = false; 
-}
-```
-<br>
-Also, there are more function that could be useful.<br>
-```cpp
-void flipCamera(int X, int Y); // 1: no change, -1: change
-void SetCameraFlip(int X, int Y); // 1: no flip, -1: flip
-void pivotCamera(int angle); // Rotate camera
-void addPivotCamera(int angle); // Add rotation to camera
-void moveCamera(v3 V); // Move camera by vector
-void zoomCamera(v3 V); // Zoom camera by vector
-void addCameraDepth(int X); // Increase camera depth
-void setCameraDepth(int X); // Set camera depth
-void shakeCamera(float intensity); // Shake camera
-```
-
-### What is Cell size?
-if you see the top of this header file, you can see a variable called 'cell size'<br>
-```cpp
-int cellSize = 2;
-```
-Cell Size represents the average size (in bytes) of each cell in the game’s grid or map system. It determines how much bytes is allocated for each cell.
-But this does not affects the memory usage. However, this affects the output of the world.
-<br>
-![2](https://github.com/user-attachments/assets/0c298168-9af7-45f2-94d3-5973601fcae8)
-<br>Enough cell for each grid (Recommended)<br><br>
-![1](https://github.com/user-attachments/assets/ed00f029-303a-426b-92ce-0d620b36ff84)
-<br>Insufficient cell size<br><br>
-![4](https://github.com/user-attachments/assets/71cfac01-c7a1-4bd2-b93b-15d4ab143d0a)
-<br>Increased cell size larger than recommended<br><br><br>
+Whenever a Vec2 is used, it is automatically converted into a Vec3 by setting the z component to 0.** <br> 
 
 
+### List of functions
 
 
