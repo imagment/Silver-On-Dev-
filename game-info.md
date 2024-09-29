@@ -13,36 +13,42 @@
 
 ### Vectors
 
-Vectors in the `game.hpp` use a custom structure `v3` defined as follows:
+This section covers the Vec2 and Vec3 classes, which represent 2D and 3D vectors, respectively.
+These classes provide basic vector arithmetic operations and predefined directional vectors for 3D space
 
+Class: Vec2
+Description: Represents a vector in 2D space with x and y components. The Vec2 class supports vector addition, subtraction, and scalar multiplication.
+Vec2(int x, int y): Creates a 2D vector with specified x and y components.
+Vec2 can automatically convert to Vec3. The z component of converted Vec3 would be 0.
+
+**NOTE: Vec2 class is just made for convineience. All vector parameters are used as Vec3. Wheather not using the third argument**
+
+Class: Vec3
+Description:
+Represents a vector in 3D space with x, y, and z components. The Vec3 class supports vector addition, subtraction, scalar multiplication,
+and predefined directional vectors like up, down, left, right, forward, and backward.
+
+Constructors:
+Vec3(int x, int y, int z): Creates a 3D vector with specified x, y, and z components.
+
+Predefined Directions:
 ```cpp
-struct v3 {
-    int x, y, z;
-};
+Vec3::up() // Returns a vector (0, 1, 0) representing the upward direction.
+Vec3::down() // Returns a vector (0, -1, 0) representing the downward direction.
+Vec3::left() // Returns a vector (-1, 0, 0) representing the left direction.
+Vec3::right() // Returns a vector (1, 0, 0) representing the right direction.
+Vec3::forward() // Returns a vector (0, 0, 1) representing the forward direction.
+Vec3::backward() // Returns a vector (0, 0, -1) representing the backward direction.
+Vec3::zero() // Returns a vector (0, 0, 0) representing the origin or no movement.
 ```
 
-```cpp
-v3 vec3(int x, int y, int z);
-```
-Explanation:<br><br>
-
-Parameters:<br>
-x: The x-coordinate of the vector.<br>
-y: The y-coordinate of the vector.<br>
-z: The z-coordinate of the vector.<br>
-<br>
-Returns a v3 structure with the provided coordinates.<br>
-Used when all three components of a vector (3D) are needed.<br>
 Example:
-```
-cpp
-v3 position = vec3(10, 20, 30);  // Creates a vector with x=10, y=20, z=30
-```
-<br>
-``` cpp
-vec2(int x, int y)
-```
-The vec2 function creates a 2D vector but returns it in the v3 structure, with z automatically set to 0.<br>
+
+Vec2 v1(3, 4);
+Vec2 v2(1, 2);
+Vec2 result = v1 + v2; // result is (4, 6)
+
+
 
 Function Signature:<br>
 
