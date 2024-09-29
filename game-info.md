@@ -13,23 +13,26 @@
 
 ### Vectors
 
-This section covers the Vec2 and Vec3 classes, which represent 2D and 3D vectors, respectively.
-These classes provide basic vector arithmetic operations and predefined directional vectors for 3D space
+This section covers the Vec2 and Vec3 classes, which represent 2D and 3D vectors, respectively. <br>
+These classes provide basic vector arithmetic operations and predefined directional vectors for 3D space <br>
+<br>
+Class: Vec2 <br>
+Description: The Vec2 class represents a vector in 2D space with x and y components. It supports basic vector arithmetic operations such as addition, subtraction, and scalar multiplication. 
 
-Class: Vec2
-Description: Represents a vector in 2D space with x and y components. The Vec2 class supports vector addition, subtraction, and scalar multiplication.
-Vec2(int x, int y): Creates a 2D vector with specified x and y components.
-Vec2 can automatically convert to Vec3. The z component of converted Vec3 would be 0.
-
-**NOTE: Vec2 class is just made for convineience. All vector parameters are used as Vec3. Wheather not using the third argument**
-
+```cpp
+Vec2(int x, int y) // Creates a 2D vector with specified x and y components.
+```
+Conversion to Vec3: Vec2 can automatically convert to Vec3. When converted, the z component of the resulting Vec3 is set to 0. <br>
+<br>
 Class: Vec3
-Description:
-Represents a vector in 3D space with x, y, and z components. The Vec3 class supports vector addition, subtraction, scalar multiplication,
-and predefined directional vectors like up, down, left, right, forward, and backward.
-
+Description: The Vec3 class represents a vector in 3D space with x, y, and z components. It supports vector addition, subtraction, scalar multiplication, <br>
+and includes predefined directional vectors for common directions like up, down, left, right, forward, and backward <br>
+<br>
 Constructors:
-Vec3(int x, int y, int z): Creates a 3D vector with specified x, y, and z components.
+```cpp
+Vec3(int x, int y, int z) // Creates a 3D vector with specified x, y, and z components.
+```
+<br>
 
 Predefined Directions:
 ```cpp
@@ -43,11 +46,11 @@ Vec3::zero() // Returns a vector (0, 0, 0) representing the origin or no movemen
 ```
 
 Example:
-
+```cpp
 Vec2 v1(3, 4);
-Vec2 v2(1, 2);
-Vec2 result = v1 + v2; // result is (4, 6)
-
+Vec3 v2(1, 2, 3);
+Vec2 result = v1 + v2 + vec3.up; // result is (4, 7, 3)
+```
 
 
 Function Signature:<br>
