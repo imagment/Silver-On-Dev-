@@ -69,6 +69,30 @@ Example usage:
 ```cpp
 silver.camera.setCam(Vec2(int,int),Vec2(int,int),int);
 ```
+Then this sets the camera position to the first parameter pos, and sets the camera size to the second parameter scale. And the camera depth would be the third parameter depth. <br>
+
+Also, there are a variety of function that can control the camera
+```
+void flipCamera(int X, int Y); // 1 not toggle, -1 toggle
+void SetCameraFlip(int X, int Y); // 1 normal, -1 mirror
+void pivotCamera(int angle); // rotates the camera
+void addPivotCamera(int angle); // adds the rotation of the camera 
+void shakeCamera(float intensity); // shakes the camera
+void zoomCamera(Vec3 V); // make camera more bigger
+void addCameraDepth(int X); // increases the maxinum depth that camera could see
+void setCameraDepth(int X); // sets the maxinum depth that camera could see
+void moveCamera(Vec3 V); // moves the camera
+```
+Also, to print the camera's view, you can use 
+```cpp
+void photo();
+// or
+std::vector<std::vector<std::string>> gPhoto();
+```
+`photo()` prints the camera's view, and `gPhoto();` returns the camera view as a vector. <br>
+and you can use `clear()` to clear the console, and you can update the camera per each frame. <br>
+However, using `clear()` and `photo()` could cause blinking because it repetively deletes everything and writes context <br>
+to the console. So you can use `printCam()`. 
 
 
 ### List of functions
@@ -95,12 +119,12 @@ void drawCircleHollow(Vec3 center, int radius, std::string c);
 void drawRectangleHollow(Vec3 topLeft, int width, int height, string c);
 
 //Movement
-void setObjectPositionX(string name, int number, int x_offset);
-void setObjectPositionY(const std::string name, int number, int y_offset);
-void setObjectPositionXY(const std::string name, int number, Vec3 pos);
+void setObjectPositionX(const string& name, const variant<int, vector<int>>& number, Vec3 pos);
+void setObjectPositionY(const string& name, const variant<int, vector<int>>& number, Vec3 pos);
+void setObjectPositionXY(const string& name, const variant<int, vector<int>>& number, Vec3 pos);
 void setObjectPosition(const std::string name, int number, Vec3 pos);
 
-void setObjectPositionRandom(const std::string& name, int number);
+void setObjectPositionRandom(const std::string& name, const std::variant<int, std::vector<int>>& number);
 void setObjectPositionToSprite(const std::string& name, int number, const std::string& targetName, int targetNumber);
 
 void moveObjectPositionX(string name, int number, int x_offset); 
@@ -108,11 +132,12 @@ void moveObjectPositionY(string name, int number, int y_offset);
 void moveObjectPositionXY(const std::string name, int number, Vec3 pos);
 void moveObjectPosition(const std::string name, int number, Vec3 pos);
 
-void glideObjectPositionRandom(const std::string& name, int number, float speed) ;
-void glideObjectPositionX(string name, int number, int x_offset, float speed);
-void glideObjectPositionY(string name, int number, int target_y, float speed);
-void glideObjectPositionXY(string name, int number, Vec3 target_pos, float speed);
-void glideObjectPositionToSprite(const string& name, int number, const string& target, int targetNumber,float speed);
+ void glideObjectPositionRandom(const string& name, variant<int, vector <int>>& number, Vec3 position, float speed);
+void glideObjectPositionX(string name, const std::variant<int, std::vector<int>>& number, int x_offset, float speed);
+void glideObjectPositionY(string name, const variant<int, vector<int>>& number, int y_offset, float speed);
+void glideObjectPositionXY(string name, const variant <vector <int>, int>& number, Vec3 target_pos, float speed);
+void glideObjectPositionToSprite(const string& name, const variant<int, vector<int>>& number,
+                                         const string& target, int targetNumber, float speed);
     
 //World related
 void setWorldBounds(Vec3 world);
@@ -137,6 +162,8 @@ void setCameraDepth(int X);
 void moveCamera(Vec3 V); 
 void startVideo(int FPS);
 void endVideo();
+void photo();
+std::vector<std::vector<std::string>> gPhoto();
 //e.g. camera.printCam()
 //e.g. Camera c; c.printcam();
 
