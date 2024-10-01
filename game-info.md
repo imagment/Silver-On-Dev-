@@ -14,7 +14,7 @@
 
 ### Vectors
 
-This section covers the Vec2 and Vec3 classes, which represent 2D and 3D vectors, respectively. <br>
+This section covers the Vec2 and Vec3 classes, respectively, representing 2D and 3D vectors. <br>
 These classes provide basic vector arithmetic operations and predefined directional vectors for 3D space <br>
 <br>
 Class: Vec2 <br>
@@ -61,17 +61,17 @@ While the Vec2 class is available for convenience when working with 2D vectors, 
 Whenever a Vec2 is used, it is automatically converted into a Vec3 by setting the z component to 0.** <br> <br>
 
 ### Camera
-**NOTE: All camera related functions are in the class 'Camera'**<br>
-To set the camera position, you can use this function.<br>
+**NOTE: All camera-related functions are in the class 'Camera'**<br>
+You can use this function to set the camera position.<br>
 `void setCam(Vec3 pos, Vec3 scale, int depth);`
 <br>
 Example usage:
 ```cpp
 silver.camera.setCam(Vec2(int,int),Vec2(int,int),int);
 ```
-Then this sets the camera position to the first parameter pos, and sets the camera size to the second parameter scale. And the camera depth would be the third parameter depth. <br>
+Then this sets the camera position to the first parameter pos and the camera size to the second parameter scale. The camera depth would be the third parameter depth. <br>
 
-Also, there are a variety of function that can control the camera
+Also, there are a variety of functions that can control the camera
 ```
 void flipCamera(int X, int Y); // 1 not toggle, -1 toggle
 void SetCameraFlip(int X, int Y); // 1 normal, -1 mirror
@@ -91,8 +91,8 @@ std::vector<std::vector<std::string>> gPhoto();
 ```
 `photo()` prints the camera's view, and `gPhoto();` returns the camera view as a vector. <br>
 and you can use `clear()` to clear the console, and you can update the camera per each frame. <br>
-However, using `clear()` and `photo()` could cause blinking because it repetively deletes everything and writes context <br>
-to the console. If you want to display the camera continueously, you can use `printCam()` in a while loop.<br>
+However, using `clear()` and `photo()` could cause blinking because it repetitively deletes everything and writes context <br>
+to the console. If you want to display the camera continuously, you can use `printCam()` in a while loop.<br>
 ```cpp
 //Example usage
 while (1) {
@@ -100,11 +100,11 @@ while (1) {
   silver.wait(1000);
 }
 ```
-However, if you don't want to use a while loop or make things more efficient, you might want to use this function.
+However, if you don't want to use a while loop or make things more efficient, you can use this function.
 ```cpp
 silver.camera.startVideo(1);
 ```
-And you can stop the video by using this function.
+You can stop the video by using this function.
 ```cpp
 silver.camera.stopVideo();
 ```
@@ -113,19 +113,20 @@ silver.camera.stopVideo();
 There are 2 kinds of 'camera exceptions' Camera exception strings get displayed when there is no object in a certain cell. <br>
 <br>
 1. Null Object Replacement (🧱) <br>
-If there is no object in a certain cell, Null object replacement character get displayed.
+The Null object replacement character gets displayed if a cell doesn't have any objects.
 
-2. Out of bounds replacement (🟦) <br>
-When '🧱' gets displayed, if that cell is out of the world range, Out of bounds replacement character gets printed instead. <br>
+2. Out-of-bounds replacement (🟦) <br>
+When '🧱' gets displayed, the out-of-bounds replacement character gets printed instead if that cell is out of the world range. <br>
 <br>
-In order to select those characters, you can use this function.
+You can use this function to select those characters.
 ```cpp
 void Silver::Camera::configCameraException(string o, string n);
 ```
-
+This sets the out-of-bounds string to o and sets the Null object replacement string to n.<br>
+<br>
 
 ### List of functions
-These are the list of functions, classes, keywords etc.
+These are the list of functions, classes, keywords, etc.
 ```cpp
 //Vector related
 Vec2(int x, int y)
@@ -175,7 +176,7 @@ void setWorldBounds(Vec3 world);
 void applyComponent(const std::string object, int number, const std::string component, ...);
 void removeScript(const std::string objectName, const std::string& scriptToRemove);
 
-//Camera related (in class camera)
+//Camera related (these functions are in class camera)
 void setCam(Vec3 pos, Vec3 scale, int depth);
 void printCam();
 void flipCamera(int X, int Y); 
@@ -197,4 +198,5 @@ std::vector<std::vector<std::string>> gPhoto();
 //e.g. Camera c; c.printcam();
 
 ```
+
 
