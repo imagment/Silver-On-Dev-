@@ -120,6 +120,7 @@ When '🧱' gets displayed, the out-of-bounds replacement character gets printed
 <br>
 You can use this function to select those characters.
 ``` cpp
+
 void Silver::Camera::configCameraException(string o, string n);
 ```
 This sets the out-of-bounds string to o and sets the Null object replacement string to n.<br>
