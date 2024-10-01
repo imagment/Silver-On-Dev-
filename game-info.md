@@ -92,7 +92,25 @@ std::vector<std::vector<std::string>> gPhoto();
 `photo()` prints the camera's view, and `gPhoto();` returns the camera view as a vector. <br>
 and you can use `clear()` to clear the console, and you can update the camera per each frame. <br>
 However, using `clear()` and `photo()` could cause blinking because it repetively deletes everything and writes context <br>
-to the console. So you can use `printCam()`. 
+to the console. If you want to display the camera continueously, you can use `printCam()` in a while loop.<br>
+```cpp
+//Example usage
+while (1) {
+  silver.camera.printCam();
+  silver.wait(1000);
+}
+```
+However, if you don't want to use a while loop or make things more efficient, you might want to use this function.
+```cpp
+silver.camera.startVideo(1);
+```
+And you can stop the video by using this function.
+```cpp
+silver.camera.stopVideo();
+```
+
+### Advanced camera functions
+
 
 
 ### List of functions
