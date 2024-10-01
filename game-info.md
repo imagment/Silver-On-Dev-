@@ -130,6 +130,7 @@ This sets the out-of-bounds string to o and sets the Null object replacement str
 `printCam()` function prints the world by using `gotoxy()` function. However, that can cause one cell overwrites context in another cell.<br>
 For example, this is what happens when insufficient cell was allocated.<br>
 ![屏幕截图 2024-10-01 220125](https://github.com/user-attachments/assets/429e6bbe-9354-45a1-bf87-ea7661a7fed9)
+<br>
 And this is very akward. So in Silver C++, we deemed this as a exception, and prints this message when insufficient cell was allocated.<br>
 `Insufficient Cell allocated`
 
