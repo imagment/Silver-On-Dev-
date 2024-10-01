@@ -110,7 +110,18 @@ silver.camera.stopVideo();
 ```
 
 ### Advanced camera functions
+There are 2 kinds of 'camera exceptions' Camera exception strings get displayed when there is no object in a certain cell. <br>
+<br>
+1. Null Object Replacement (🧱) <br>
+If there is no object in a certain cell, Null object replacement character get displayed.
 
+2. Out of bounds replacement (🟦) <br>
+When '🧱' gets displayed, if that cell is out of the world range, Out of bounds replacement character gets printed instead. <br>
+<br>
+In order to select those characters, you can use this function.
+```cpp
+void Silver::Camera::configCameraException(string o, string n);
+```
 
 
 ### List of functions
