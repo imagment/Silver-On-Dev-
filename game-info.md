@@ -159,7 +159,7 @@ Objects are numbered for unique identification and manipulation within the world
 
 ### Object Movement
 
-```
+```cpp
 void setObjectPositionX(const string& name, const variant<int, vector<int>>& number, Vec3 pos);
 void setObjectPositionY(const string& name, const variant<int, vector<int>>& number, Vec3 pos);
 void setObjectPositionXY(const string& name, const variant<int, vector<int>>& number, Vec3 pos);
