@@ -119,7 +119,7 @@ The Null object replacement character gets displayed if a cell doesn't have any 
 When '🧱' gets displayed, the out-of-bounds replacement character gets printed instead if that cell is out of the world range. <br>
 <br>
 You can use this function to select those characters.
-```cpp
+``` cpp
 void Silver::Camera::configCameraException(string o, string n);
 ```
 This sets the out-of-bounds string to o and sets the Null object replacement string to n.<br>
