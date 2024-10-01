@@ -109,7 +109,7 @@ You can stop the video by using this function.
 silver.camera.stopVideo();
 ```
 
-### Advanced camera functions
+### Advanced camera functions & Cells
 There are 2 kinds of 'camera exceptions' Camera exception strings get displayed when there is no object in a certain cell. <br>
 <br>
 1. Null Object Replacement (🧱) <br>
@@ -126,6 +126,14 @@ void Silver::Camera::configCameraException(string o, string n);
 
 This sets the out-of-bounds string to o and sets the Null object replacement string to n.<br>
 <br>
+<br>
+`printCam()` function prints the world by using `gotoxy()` function. However, that can cause one cell overwrites context in another cell.<br>
+For example, this is what happens when insufficient cell was allocated.<br>
+![屏幕截图 2024-10-01 220125](https://github.com/user-attachments/assets/429e6bbe-9354-45a1-bf87-ea7661a7fed9)
+And this is very akward. So in Silver C++, we deemed this as a exception, and prints this message when insufficient cell was allocated.<br>
+`Insufficient Cell allocated`
+
+
 
 ### List of functions
 These are the list of functions, classes, keywords, etc.
@@ -164,7 +172,7 @@ void moveObjectPositionY(string name, int number, int y_offset);
 void moveObjectPositionXY(const std::string name, int number, Vec3 pos);
 void moveObjectPosition(const std::string name, int number, Vec3 pos);
 
- void glideObjectPositionRandom(const string& name, variant<int, vector <int>>& number, Vec3 position, float speed);
+void glideObjectPositionRandom(const string& name, variant<int, vector <int>>& number, Vec3 position, float speed);
 void glideObjectPositionX(string name, const std::variant<int, std::vector<int>>& number, int x_offset, float speed);
 void glideObjectPositionY(string name, const variant<int, vector<int>>& number, int y_offset, float speed);
 void glideObjectPositionXY(string name, const variant <vector <int>, int>& number, Vec3 target_pos, float speed);
