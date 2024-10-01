@@ -113,7 +113,7 @@ silver.camera.stopVideo();
 There are 2 kinds of 'camera exceptions' Camera exception strings get displayed when there is no object in a certain cell. <br>
 <br>
 1. Null Object Replacement (🧱) <br>
-The Null object replacement character gets displayed if a cell doesn't have any objects.
+The Null object replacement character gets displayed if a cell has no objects.
 
 2. Out-of-bounds replacement (🟦) <br>
 When '🧱' gets displayed, the out-of-bounds replacement character gets printed instead if that cell is out of the world range. <br>
@@ -121,10 +121,10 @@ When '🧱' gets displayed, the out-of-bounds replacement character gets printed
 You can use this function to select those characters.
 
 ```cpp
-void Silver::Camera::configCameraException(string o, string n);
+void configCameraException(string o, string n);
 ```
 
-This sets the out-of-bounds string to o and sets the Null object replacement string to n.<br>
+This sets the out-of-bounds string to o and the Null object replacement string to n.<br>This function is in the class camera.
 <br>
 <br>
 `printCam()` function prints the world by using `gotoxy()` function. However, that can cause one cell to overwrite context in another cell.<br>
