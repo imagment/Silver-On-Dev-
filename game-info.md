@@ -127,13 +127,12 @@ void Silver::Camera::configCameraException(string o, string n);
 This sets the out-of-bounds string to o and sets the Null object replacement string to n.<br>
 <br>
 <br>
-`printCam()` function prints the world by using `gotoxy()` function. However, that can cause one cell overwrites context in another cell.<br>
-For example, this is what happens when insufficient cell was allocated.<br>
-![屏幕截图 2024-10-01 220125](https://github.com/user-attachments/assets/429e6bbe-9354-45a1-bf87-ea7661a7fed9)
-<br>
-And this is very akward. So in Silver C++, we deemed this as a exception, and prints this message when insufficient cell was allocated.<br>
-`Insufficient Cell allocated`
-
+`printCam()` function prints the world by using `gotoxy()` function. However, that can cause one cell to overwrite context in another cell.<br>
+So if the current cell size is `1`, but if some cell has `"Foobar"`, only the `'F'` would be printed. The default cell size is 2. You can use this function<br>to set the cell size.
+```cpp
+void cell(int c);
+```
+and it is in class camera.
 
 
 ### List of functions
