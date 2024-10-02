@@ -116,6 +116,11 @@ You can configure these using:
 ```cpp
 void configCameraException(string o, string n); // o = out-of-bounds, n = null object replacement
 ```
+<br>
+And if you want to set the world bounds, you can use the following function:
+`void setWorldBounds(Vec3 world);`
+This sets the world bounds to `Vec3 world`. However, this does not change the minimum X and Y coordinates to <br>
+stay in the world.
 
 **Cell Size**:
 The default cell size is 2. You can adjust the cell size using:
@@ -187,7 +192,7 @@ To move an object, <br>
  - Assign a vector of numbers in `variant<int, vector<int>>& number` to target specific objects with those numbers.
 - Write the vector in `Vec3 position`.
 - If this is a gliding function, write speed on `float speed`.
-  
+
 ### List of functions
 
 ```cpp
