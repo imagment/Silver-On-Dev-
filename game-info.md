@@ -64,7 +64,8 @@ void setCam(Vec3 pos, Vec3 scale, int depth);
 
 Example usage:
 ```cpp
-silver.camera.setCam(Vec2(int,int),Vec2(int,int),int);
+silver.camera.setCam3(Vec3(int,int,int),Vec3(int,int,int)); 
+silver.camera.setCam2(Vec2(int,int),Vec2(int,int)); // Does not change Z pos and Z scale
 ```
 
 This sets the camera position to the first parameter `pos`, the camera size to the second parameter `scale`, and the camera depth to the third parameter `depth`.
@@ -246,7 +247,8 @@ void applyComponent(const std::string object, int number, const std::string comp
 void removeScript(const std::string objectName, const std::string& scriptToRemove);
 
 // Camera related
-void setCam(Vec3 pos, Vec3 scale, int depth);
+void setCam3(Vec3 pos, Vec3 scale);
+void setCam2(Vec3 pos, Vec3 scale);
 void printCam();
 void flipCamera(int X, int Y);
 void setCameraFlip(int X, int Y);
